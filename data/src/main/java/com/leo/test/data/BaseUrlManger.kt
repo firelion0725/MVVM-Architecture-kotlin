@@ -6,5 +6,5 @@ package com.leo.test.data
  * @function
  */
 object BaseUrlManger {
-    public val BASE_URL: String = "http://ceshi.canyannet.com/"
+    val BASE_URL: String = "https://gank.io/"
 }

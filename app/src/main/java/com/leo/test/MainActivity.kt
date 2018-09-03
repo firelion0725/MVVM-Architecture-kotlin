@@ -11,7 +11,7 @@ class MainActivity : BaseActivity<MainViewModel>() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        viewModel.data.observe(this, Observer {
+        viewModel.categoryData.observe(this, Observer {
             if (it != null) {
                 Log.i("observe", "" + it)
             } else {
@@ -19,6 +19,6 @@ class MainActivity : BaseActivity<MainViewModel>() {
             }
         })
 
-        viewModel.getData()
+        viewModel.getCategories()
     }
 }
