@@ -2,7 +2,6 @@ package com.leo.test.data.http
 
 import com.leo.test.data.RetrofitManger
 import com.leo.test.data.dao.load.CategoriesDao
-import com.leo.test.data.dao.up.PostTaskModel
 import com.leo.test.data.rx.RxUtils
 import io.reactivex.Single
 

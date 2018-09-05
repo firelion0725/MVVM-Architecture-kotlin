@@ -4,7 +4,6 @@ import android.util.Log
 import androidx.lifecycle.MutableLiveData
 import com.leo.test.base.BaseViewModel
 import com.leo.test.data.dao.load.CategoriesDao
-import com.leo.test.data.dao.up.PostTaskModel
 import com.leo.test.data.http.TaskClouds
 import com.leo.test.data.rx.AbstractSingleHttp
 
