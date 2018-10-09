@@ -5,7 +5,6 @@ import androidx.lifecycle.MutableLiveData
 import com.leo.test.base.BaseViewModel
 import com.leo.test.data.dao.load.CategoriesDao
 import com.leo.test.data.http.TaskClouds
-import com.leo.test.data.rx.AbstractSingleHttp
 
 /**
  * @date 2018/8/31
@@ -18,7 +17,8 @@ class MainViewModel : BaseViewModel() {
 
     fun getCategories() {
         TaskClouds.getCategories()
-                .subscribe(object : AbstractSingleHttp<CategoriesDao>() {
+                .subscribe(object : BaseViewModelSingleObserver<CategoriesDao>() {
+
                     override fun onSuccess(t: CategoriesDao) {
                         Log.i("getData", "onSuccess")
                         categoryData.value = t

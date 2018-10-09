@@ -21,4 +21,9 @@ class MainActivity : BaseActivity<MainViewModel>() {
 
         viewModel.getCategories()
     }
+
+    override fun onDestroy() {
+        super.onDestroy()
+        viewModel.categoryData.removeObservers(this)
+    }
 }

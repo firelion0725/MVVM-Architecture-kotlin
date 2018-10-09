@@ -18,19 +18,14 @@ open class BaseViewModel : ViewModel(), LifecycleObserver {
 
     private val TAG = this.javaClass.simpleName
 
-    private lateinit var compositeDisposable: CompositeDisposable
+    private var compositeDisposable: CompositeDisposable = CompositeDisposable()
 
     protected fun addSubscribe(disposable: Disposable) {
-        if (compositeDisposable == null) {
-            compositeDisposable = CompositeDisposable()
-        }
         compositeDisposable.add(disposable)
     }
 
     protected fun unSubscribe() {
-        if (compositeDisposable != null) {
-            compositeDisposable.clear()
-        }
+        compositeDisposable.clear()
     }
 
     //----------------------LifeCycle----------------------
